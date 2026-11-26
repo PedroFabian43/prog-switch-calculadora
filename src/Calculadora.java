@@ -17,9 +17,10 @@ public class Calculadora {
     }
 
     public int calcular(){
+        int resultado = 0;
         switch(operacion){
             
-            case SUMA -> num1 + num2;
+            case SUMA -> resultado = num1 + num2;
 
             case RESTA -> resultado = num1 - num2;
 
