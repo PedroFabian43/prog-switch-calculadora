@@ -14,13 +14,13 @@ public class Consola {
 
         final String MENU = """
                             === MENÚ CALCULADORA ===
-                            ¿Qué deseas hacer?
+                            ¿Qué deseas hacer?\n
                             1. Sumar
                             2. Restar
                             3. Multiplicar
                             4. Dividir
                             ========================
-                            Opción: """;
+                            Opción:\s""";
 
         final String MSG_RESUL = "El resultado es: ";
 
