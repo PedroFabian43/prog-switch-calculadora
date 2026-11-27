@@ -43,7 +43,7 @@ public class Consola {
         num2 = Integer.valueOf(sc.nextLine());
 
         System.out.print(PETICION_OPERACION);
-        operacionUsuario = sc.nextLine();
+        operacionUsuario = sc.nextLine().trim();
 
         operacion = new Operacion(num1, num2, operacionUsuario);
 
