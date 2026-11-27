@@ -4,10 +4,6 @@ public class Consola {
     
     public static void main(String[] args){
 
-        final String OPER_SUMA = "+";
-        final String OPER_RESTA = "-";
-        final String OPER_MULTI = "*";
-
         final String PETICION_NUM1 = "Dime un número: ";
         final String PETICION_NUM2 = "Dime otro número: ";
         final String PETICION_OPERACION = "Que operación quieres hacer: ";
@@ -16,10 +12,9 @@ public class Consola {
 
         int num1;
         int num2;
-        int resultado = 0;
         String operacionUsuario;
 
-        Operador operacion;
+        Operacion operacion;
 
         Scanner sc = new Scanner(System.in);
 
@@ -32,32 +27,11 @@ public class Consola {
         System.out.print(PETICION_OPERACION);
         operacionUsuario = sc.nextLine();
 
-        if(operacionUsuario.equals(OPER_SUMA)){
-            operacion = Operador.SUMA;
-        }
-        else if(operacionUsuario.equals(OPER_RESTA)){
-            operacion = Operador.RESTA;
-        }
-        else if(operacionUsuario.equals(OPER_MULTI)){
-            operacion = Operador.MULTIPLICACION;
-        }
-        else{
-            operacion = Operador.DIVISION;
-        }
+        operacion = new Operacion(num1, num2, operacionUsuario);
 
+        System.out.println(MSG_RESUL+operacion.calcular());
 
-        switch(operacion){
-            
-            case SUMA -> resultado = num1 + num2;
-
-            case RESTA -> resultado = num1 - num2;
-
-            case MULTIPLICACION -> resultado = num1 * num2;
-
-            case DIVISION -> resultado = num1 / num2;
-        }
-
-        System.out.println(MSG_RESUL+resultado);
+        
 
         sc.close();
     }
