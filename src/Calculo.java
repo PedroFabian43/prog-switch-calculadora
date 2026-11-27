@@ -1,23 +1,20 @@
-public class Operacion {
+public class  Calculo{
 
     public static final String OPER_SUMA = "+";
     public static final String OPER_RESTA = "-";
     public static final String OPER_MULTI = "*";
 
-
-
-
     private int num1;
     private int num2;
     private Operador operacion;
 
-    public Operacion(int num1, int num2, Operador operacion){
+    public Calculo(int num1, int num2, Operador operacion){
         this.num1 = num1;
         this.num2 = num2;
         this.operacion = operacion;   
     }
 
-    public Operacion(int num1, int num2, String operacion){
+    public Calculo(int num1, int num2, String operacion){
         this.num1 = num1;
         this.num2 = num2;
 

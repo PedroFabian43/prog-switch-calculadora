@@ -29,8 +29,8 @@ public class Consola {
         String operacionUsuario;
         int opcion;
 
-        Operacion operacion;
-        Operacion operacion2;
+        Calculo operacion;
+        Calculo operacion2;
 
         Operador oper;
 
@@ -45,7 +45,7 @@ public class Consola {
         System.out.print(PETICION_OPERACION);
         operacionUsuario = sc.nextLine().trim();
 
-        operacion = new Operacion(num1, num2, operacionUsuario);
+        operacion = new Calculo(num1, num2, operacionUsuario);
 
         System.out.println(MSG_RESUL + operacion.calcular());
 
@@ -65,7 +65,7 @@ public class Consola {
             oper = Operador.DIVISION;
         }
 
-        operacion2 = new Operacion(num1, num2, oper);
+        operacion2 = new Calculo(num1, num2, oper);
         System.out.println(MSG_RESUL + operacion2.calcular());
 
         sc.close();
